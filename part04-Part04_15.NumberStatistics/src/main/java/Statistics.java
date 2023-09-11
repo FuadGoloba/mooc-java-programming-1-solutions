@@ -9,8 +9,8 @@ public class Statistics {
     }
     
     public void addNumber(int number) {
-        this.count += 1;
         this.sum += number;
+        this.count++;
     }
     
     public int getCount() {
@@ -22,10 +22,10 @@ public class Statistics {
     }
     
     public double average() {
-        if (this.count == 0) {
-            return (double) this.count;
-        } else {
-            return (double) this.sum / this.count;
+        if (sum() == 0) {
+            return 0;
         }
-    }
+        return (double) sum() / getCount(); 
+     }
 }
+
